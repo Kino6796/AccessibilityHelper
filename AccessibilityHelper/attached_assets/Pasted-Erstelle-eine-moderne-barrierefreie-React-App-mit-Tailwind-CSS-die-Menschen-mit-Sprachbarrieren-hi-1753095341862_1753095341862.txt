@@ -1,0 +1,53 @@
+Erstelle eine moderne, barrierefreie React-App mit Tailwind CSS, die Menschen mit Sprachbarrieren hilft, Termine mit Unternehmen (z. B. Restaurants, Ärzten, Friseuren usw.) zu vereinbaren.
+
+🎯 Zielgruppe:
+- Menschen mit Sprachbarrieren (z. B. Gehörlose, Menschen mit Angst vor Telefonaten, Menschen mit Migrationshintergrund)
+- Menschen ohne Sprachbarrieren, die schnell und einfach Termine vereinbaren oder Aktivitäten entdecken möchten
+
+🧩 Hauptfunktionen:
+1. Wochen-Kalenderansicht (Mo–Fr, 08:00–18:00 Uhr) mit 15-Minuten-Zeitslots
+2. Slots sind klickbar und haben moderne Farben:
+   - 🟢 **Grün (#4ade80)** = verfügbar
+   - 🔵 **Blau (#60a5fa)** = vom Nutzer freigegeben
+   - 🔴 **Rot (#f87171)** = bereits gebucht
+   - 🟡 **Gelb (#facc15)** = vorgeschlagene Termine / Events
+3. Terminslots werden lokal im `localStorage` gespeichert (später Firebase)
+4. Unternehmen (Restaurants, Ärzte, etc.) können eigene freie Slots bereitstellen
+5. Unternehmensübersicht (Listen- oder Kartenansicht) mit Filteroptionen (z. B. Kategorie, Ort)
+6. Nutzer können Unternehmen auswählen und verfügbare Zeiten buchen
+7. **Premium-Funktion:**
+   - Eine KI ruft das Unternehmen automatisch an und handelt einen passenden Termin aus
+   - Termin wird automatisch in den Kalender des Nutzers & des Unternehmens eingetragen
+8. **Freizeitfunktion (für alle Nutzer):**
+   - Bei Langeweile werden Events oder Aktivitäten vorgeschlagen (z. B. Konzerte, Ausstellungen, Sport, etc.)
+   - User können direkt buchen oder in den Kalender übernehmen
+
+🎨 Design:
+- Modernes, cleanes UI (ähnlich wie Notion, Linear oder Vercel)
+- Tailwind CSS mit sanften Schattierungen, Card-Designs, abgerundeten Ecken, responsiv
+- Farbpalette: 
+   - Primärfarben: #4ade80 (Grün), #60a5fa (Blau), #facc15 (Gelb), #f87171 (Rot), #1e293b (Dunkelgrau)
+   - Hintergrund: #f8fafc (Hellgrau)
+- Nutze sinnvolle Typografie, klare Hierarchien, große Buttons für Touch-Bedienung
+- Responsive Mobile-First-Design
+
+🔐 Barrierefreiheit:
+- Kontrastreiche Farben (WCAG AA/AAA)
+- ARIA-Labels & Screenreader-Kompatibilität
+- Einfache Sprache & klare Anweisungen
+- Tastatursteuerung
+
+🛠 Technik:
+- React mit funktionalen Komponenten (kein Typescript)
+- Tailwind CSS für Styling
+- Datenverwaltung mit useState & useEffect
+- Projektstruktur:
+  - `App.js` (Routing & Zustand)
+  - `Calendar.js` (Kalender-UI & Slot-Auswahl)
+  - `CompanyList.js` (Unternehmensübersicht)
+  - `Booking.js` (Buchungslogik)
+  - `Events.js` (Freizeitvorschläge)
+  - `firebase.js` (optional)
+  - `index.js`, `index.css`
+
+Optional: Nutze Framer Motion für Animationen (z. B. Slot-Hover, Buchungsbestätigung).
